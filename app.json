@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Play + Craft 2025",
+    "slug": "play-plus-craft-2025",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/apple-touch-icon.png",
+    "scheme": "play-plus-craft-2025",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/apple-touch-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.lasjdhu.playpluscraft2025"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon-32x32.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#1a1a2e",
+          "image": "./assets/images/android-chrome-512x512.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8c27ea19-080c-471a-9452-4d118552aac3"
+      }
+    }
+  }
+}
