@@ -4,7 +4,7 @@
     "slug": "play-plus-craft-2025",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/apple-touch-icon.png",
+    "icon": "./assets/images/android-chrome-192x192.png",
     "scheme": "play-plus-craft-2025",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/apple-touch-icon.png",
+        "foregroundImage": "./assets/images/android-chrome-192x192.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -31,7 +31,7 @@
         {
           "backgroundColor": "#1a1a2e",
           "image": "./assets/images/android-chrome-512x512.png",
-          "imageWidth": 200
+          "imageWidth": 206
         }
       ]
     ],

@@ -77,7 +77,7 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <StatusBar />
+      <StatusBar style="auto" />
       <Drawer
         drawerContent={(props) => <CustomDrawerContent {...props} />}
         screenOptions={{
