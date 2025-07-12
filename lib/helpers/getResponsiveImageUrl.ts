@@ -5,7 +5,7 @@ export const getResponsiveImageUrl = (
   const url = new URL(baseUrl);
 
   if (!isLargeScreen) {
-    url.searchParams.set("w", "500");
+    url.searchParams.set("w", "600");
   }
 
   return url.toString();
