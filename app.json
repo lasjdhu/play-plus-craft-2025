@@ -37,7 +37,7 @@
             "backgroundColor": "#000000"
           },
           "imageWidth": 200,
-          "resizeMode": "contain",
+          "resizeMode": "contain"
         }
       ]
     ],

@@ -15,10 +15,11 @@ import {
   Zap,
 } from "lucide-react-native";
 import { useEffect, useState } from "react";
+import { LARGE_SCREEN_WIDTH } from "@/lib/constants";
 
-export default function About() {
+export default function AboutScreen() {
   const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 768;
+  const isLargeScreen = width >= LARGE_SCREEN_WIDTH;
 
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,

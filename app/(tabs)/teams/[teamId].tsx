@@ -5,7 +5,6 @@ import {
   ScrollView,
   TouchableOpacity,
   useWindowDimensions,
-  Platform,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {
@@ -21,8 +20,9 @@ import {
 import { Image } from "expo-image";
 import { useLocalSearchParams, router, Route } from "expo-router";
 import { teamsData } from "@/lib/data/teams";
-import { useEffect } from "react";
 import { blurhash } from "@/lib/helpers/blurhash";
+import { LARGE_SCREEN_WIDTH } from "@/lib/constants";
+import { getResponsiveImageUrl } from "@/lib/helpers/getResponsiveImageUrl";
 
 const localImages: Record<string, any> = {
   platformer: require("@/assets/images/platformer.png"),
@@ -30,17 +30,11 @@ const localImages: Record<string, any> = {
 };
 
 export default function TeamDetailScreen() {
-  const { teamId } = useLocalSearchParams();
   const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 768;
+  const isLargeScreen = width >= LARGE_SCREEN_WIDTH;
 
+  const { teamId } = useLocalSearchParams();
   const team = teamsData.find((t) => t.id === parseInt(teamId as string));
-
-  useEffect(() => {
-    if (Platform.OS === "web" && team) {
-      document.title = team.name;
-    }
-  }, [team]);
 
   if (!team) {
     return (
@@ -51,9 +45,8 @@ export default function TeamDetailScreen() {
   }
 
   const isGameReady = !!team.gameLink;
-
   const imageSource = team.gameImage?.startsWith("http")
-    ? { uri: team.gameImage }
+    ? { uri: getResponsiveImageUrl(team.gameImage, isLargeScreen) }
     : localImages[team.gameImage];
 
   const teamInfoItems = [
@@ -93,11 +86,12 @@ export default function TeamDetailScreen() {
     <ScrollView style={styles.container}>
       <View style={styles.heroContainer}>
         <Image
-          source={{ uri: team.teamImage }}
+          source={{ uri: getResponsiveImageUrl(team.teamImage, isLargeScreen) }}
           style={styles.heroImage}
           contentFit="cover"
           transition={300}
           placeholder={{ blurhash }}
+          cachePolicy="disk"
         />
         <LinearGradient
           colors={["transparent", "rgba(0,0,0,0.8)"]}
@@ -163,6 +157,7 @@ export default function TeamDetailScreen() {
                 contentFit="cover"
                 transition={300}
                 placeholder={{ blurhash }}
+                cachePolicy="disk"
               />
               <LinearGradient
                 colors={["transparent", "rgba(0,0,0,0.7)"]}

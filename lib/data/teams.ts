@@ -6,7 +6,7 @@ export const teamsData = [
     members: 8,
     location: "Brasília 🇧🇷",
     teamImage:
-      "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg",
+      "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb",
     gameImage: "platformer",
     gameLink: "/games/platformer",
     color: "#ff6b6b",
@@ -25,7 +25,7 @@ export const teamsData = [
     members: 12,
     location: "Mumbai 🇮🇳",
     teamImage:
-      "https://images.pexels.com/photos/32779348/pexels-photo-32779348.jpeg",
+      "https://images.pexels.com/photos/32779348/pexels-photo-32779348.jpeg?auto=compress&cs=tinysrgb",
     gameImage: "runner",
     gameLink: "/games/runner",
     color: "#00d4ff",
@@ -44,9 +44,9 @@ export const teamsData = [
     members: 6,
     location: "Brno 🇨🇿",
     teamImage:
-      "https://images.pexels.com/photos/9072292/pexels-photo-9072292.jpeg",
+      "https://images.pexels.com/photos/9072292/pexels-photo-9072292.jpeg?auto=compress&cs=tinysrgb",
     gameImage:
-      "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg",
+      "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb",
     color: "#ffd93d",
     achievements: ["Best Gameplay", "Audience Choice"],
     founded: "2020",
@@ -63,9 +63,9 @@ export const teamsData = [
     members: 10,
     location: "Seattle 🇺🇸",
     teamImage:
-      "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+      "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb",
     gameImage:
-      "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg",
+      "https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb",
     color: "#6c5ce7",
     achievements: ["Best Story", "Most Creative"],
     founded: "2018",
@@ -82,9 +82,9 @@ export const teamsData = [
     members: 7,
     location: "Dublin 🇮🇪",
     teamImage:
-      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg",
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb",
     gameImage:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb",
     color: "#00b894",
     achievements: ["Best Puzzle Design", "Educational Value"],
     founded: "2021",
@@ -101,9 +101,9 @@ export const teamsData = [
     members: 15,
     location: "Austin 🇺🇸",
     teamImage:
-      "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg",
+      "https://images.pexels.com/photos/73871/rocket-launch-rocket-take-off-nasa-73871.jpeg?auto=compress&cs=tinysrgb",
     gameImage:
-      "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg",
+      "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&",
     color: "#fd79a8",
     achievements: ["Best Multiplayer", "Technical Innovation"],
     founded: "2016",

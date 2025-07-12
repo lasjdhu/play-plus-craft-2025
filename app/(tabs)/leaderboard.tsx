@@ -3,12 +3,12 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  Platform,
   useWindowDimensions,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Trophy, Medal, Star } from "lucide-react-native";
 import { leaderboardData } from "@/lib/data/leaderboard";
+import { LARGE_SCREEN_WIDTH } from "@/lib/constants";
 
 const getRankIcon = (rank: number) => {
   switch (rank) {
@@ -25,7 +25,7 @@ const getRankIcon = (rank: number) => {
 
 export default function LeaderboardScreen() {
   const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 768 && Platform.OS === "web";
+  const isLargeScreen = width >= LARGE_SCREEN_WIDTH;
 
   return (
     <ScrollView style={styles.container}>
@@ -44,7 +44,7 @@ export default function LeaderboardScreen() {
             <Text style={styles.podiumScore}>92 pts</Text>
           </View>
 
-          <View style={styles.podiumItem}>
+          <View style={[styles.podiumItem, { marginBottom: 40 }]}>
             <View style={[styles.podiumRank, { backgroundColor: "#ffd93d" }]}>
               <Text style={styles.podiumPosition}>1</Text>
             </View>

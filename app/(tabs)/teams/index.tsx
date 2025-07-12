@@ -12,9 +12,13 @@ import { Users, MapPin, Star, ChevronRight } from "lucide-react-native";
 import { router } from "expo-router";
 import { teamsData } from "@/lib/data/teams";
 import { blurhash } from "@/lib/helpers/blurhash";
+import { LARGE_SCREEN_WIDTH } from "@/lib/constants";
+import { getResponsiveImageUrl } from "@/lib/helpers/getResponsiveImageUrl";
 
 export default function TeamsScreen() {
   const { width } = useWindowDimensions();
+
+  const isLargeScreen = width > LARGE_SCREEN_WIDTH;
   const cardWidth = width >= 1200 ? "48%" : "96%";
 
   const handleTeamPress = (teamId: number) => {
@@ -41,11 +45,14 @@ export default function TeamsScreen() {
             >
               <View style={styles.teamImageContainer}>
                 <Image
-                  source={{ uri: team.teamImage }}
+                  source={{
+                    uri: getResponsiveImageUrl(team.teamImage, isLargeScreen),
+                  }}
                   style={styles.teamImage}
                   contentFit="cover"
                   transition={300}
                   placeholder={{ blurhash }}
+                  cachePolicy="disk"
                 />
                 <LinearGradient
                   colors={["transparent", "rgba(0,0,0,0.8)"]}

@@ -3,12 +3,12 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  Platform,
   useWindowDimensions,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Clock, MapPin } from "lucide-react-native";
 import { scheduleData } from "@/lib/data/schedule";
+import { LARGE_SCREEN_WIDTH } from "@/lib/constants";
 
 const getEventColor = (type: string) => {
   switch (type) {
@@ -35,7 +35,7 @@ const getEventColor = (type: string) => {
 
 export default function ScheduleScreen() {
   const { width } = useWindowDimensions();
-  const isLargeScreen = width >= 768 && Platform.OS === "web";
+  const isLargeScreen = width >= LARGE_SCREEN_WIDTH;
   const columns = isLargeScreen && width >= 1200 ? 3 : isLargeScreen ? 2 : 1;
 
   return (
